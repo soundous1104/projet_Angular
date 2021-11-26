@@ -1,0 +1,61 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+       
+            <div class="pull-right">
+                <a routerLink="/assolementcreate">Nouvelle assolement</a>
+            </div>
+            <table class="table">
+                
+                <tr>
+                    
+                    <th>Domaines: </th>
+                    <th>serre: </th>
+                    <th>Superfecie en ha: </th>
+                    <th>Cultures: </th>
+                    <th>variété: </th>
+                    <th>Cycle: </th>
+                    <th>Actions</th>
+                </tr>
+           
+               
+                    
+                   
+                  
+                    <tr  *ngFor="let assolement of assolementList">
+                    
+                        <td>{{assolement.domaines}}</td>
+                        <td>{{assolement.num_serre}}</td>
+                        <td>{{assolement.sup_serre_ha}}</td>
+                        <td>{{assolement.cultures}}</td>
+                        <td>{{assolement.varietes}}</td>
+                      
+                        <td>  
+
+                            <form action=""  method="post">
+                            
+
+                            
+                            <a routerLink="/assolementedit/{{assolement.id}}" class="btn btn-default">Editer</a>
+
+                            <button type="submit" class="btn btn-danger" (click)="deleteAssolement(assolement.id)">Supprimer</button>
+                            </form>
+                        </td>
+                    </tr>
+                  
+                
+               
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

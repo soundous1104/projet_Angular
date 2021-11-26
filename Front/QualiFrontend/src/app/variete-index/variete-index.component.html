@@ -1,0 +1,56 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+      
+            <div class="pull-right">
+                <a routerLink="/varietecreate">Nouvelle variete</a>
+            </div>
+            <table class="table">
+                
+                <tr>
+                    
+                    <th>Culture: </th>
+                    <th>Variete</th>
+                    
+                    <th>Actions</th>
+                </tr>
+           
+               
+                    
+                   
+                  
+                    <tr  *ngFor="let variete of varieteList">
+                    
+                        <td>{{variete.cultures}}</td>
+                        <td>{{variete.varietes}}</td>
+                        
+                      
+                      
+                        <td>  
+
+                            <form action=""  method="post">
+                            
+
+                            <a href="" class="btn btn-primary" >Delails</a>
+                            <a routerLink="/varieteedit/{{variete.id}}" class="btn btn-default">Editer</a>
+
+                            <button type="submit" class="btn btn-danger" (click)="deleteVariete(variete.id)">Supprimer</button>
+                            </form>
+                        </td>
+                    </tr>
+                  
+                
+               
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+

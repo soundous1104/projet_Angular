@@ -1,0 +1,61 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+       
+            <div class="pull-right">
+                <a routerLink="/suivicreate">Nouveau suivi</a>
+            </div>
+            <table class="table">
+                
+                <tr>
+                    
+                    <th>Assolement: </th>
+                    <th>Date: </th>
+                    <th>Nombre d'ouvrier: </th>
+                    <th>Quantité recolté: </th>
+                    
+                    <th>Actions</th>
+                </tr>
+           
+               
+                    
+                   
+                  
+                    <tr  *ngFor="let suivi of suivi">
+                    
+                        <td>{{suivi.id_fk_06_assolement}}</td>
+                        <td>{{suivi.date_w}}</td>
+                        <td>{{suivi.nbr_ouvriers}}</td>
+                        <td>{{suivi.qt_recolte_kg}}</td>
+                       
+                      
+                        <td>  
+
+                            <form action=""  method="post">
+                            
+
+                         
+                            <a routerLink="/suiviedit/{{suivi.id}}" class= "btn waves-effect waves-light border-round gradient-45deg-amber-amber col s20">Editer</a>
+
+                            <button type="submit" class="btn waves-effect waves-light border-round #c62828 red darken-3 col s20" (click)="deleteSuivi(suivi.id)">Supprimer</button>
+                            </form>
+
+                           
+               
+                        
+                        </td>
+                    </tr>
+                  
+                
+               
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+

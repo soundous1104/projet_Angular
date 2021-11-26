@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <form >
+            <div class="form-group">
+                <label for="cultureId"> Culture:</label>
+        
+                <select name="culture"  [(ngModel)]="variete.cultureSelect">
+               
+                <option  *ngFor="let culture of varieteCulture">{{culture}}</option>
+                
+                </select>
+               </div>
+           <div class="form-group">
+            <label for="domaine">Variété:</label> 
+          
+            <input type="text" name="variete"  id="variete" class="form-control" placeholder="Entrer la variete" [(ngModel)]="variete.varietes"></div>
+          
+            
+            <div class="form-group">
+            <input type="submit"   class="form-control btn btn-danger"  (click)="update()"   value="Update"></div>
+        </form>
+        </div>
+    </div>
+    </div>
+
+
+

@@ -1,0 +1,57 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+       
+            <div class="pull-right">
+                <a routerLink="/serrecreate">Nouvelle serre</a>
+            </div>
+            <table class="table">
+                
+                <tr>
+                    
+                    <th>Domaines: </th>
+                    <th>serre: </th>
+                    <th>Superfecie en ha: </th>
+                    <th>Actions</th>
+                </tr>
+           
+               
+                    
+                   
+                  
+                    <tr  *ngFor="let serre of serreList">
+                    
+                        <td>{{serre.domaines}}</td>
+                        <td>{{serre.num_serre}}</td>
+                        <td>{{serre.sup_serre_ha}}</td>
+                      
+                      
+                        <td>  
+
+                            <form action=""  method="post">
+                            
+
+                           
+                            <a routerLink="/serreedit/{{serre.id}}" class="btn waves-effect waves-light border-round gradient-45deg-amber-amber col s20">Editer</a>
+                           
+
+                            <button type="submit" class="btn waves-effect waves-light border-round #c62828 red darken-3 col s20" (click)="deleteSerre(serre.id)">Supprimer</button>
+                            </form>                                                                       
+                        </td>
+                    </tr>
+                  
+                
+               
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+

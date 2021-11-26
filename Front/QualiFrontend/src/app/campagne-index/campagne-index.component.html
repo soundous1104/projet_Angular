@@ -1,0 +1,58 @@
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+       
+            <div class="pull-right">
+                <a routerLink="/campagnecreate">Nouvelle campagne</a>
+            </div>
+            <table class="table">
+              
+                
+                <tr>
+                    
+                    <th>Campagnes: </th>
+                    
+                    
+                    <th>Actions</th>
+                </tr>
+           
+               
+                    
+                   
+                  
+                    <tr  *ngFor="let campagne of campagneList">
+                    
+                        <td>{{campagne.campagne}}</td>
+                        
+                      
+                      
+                        <td>  
+
+                            <form action=""  method="post">
+                            
+
+                           
+                            <a routerLink="/campagneedit/{{campagne.id}}" class="btn btn-default">Editer</a>
+
+                            <button type="submit" class="btn btn-danger"  (click)="deleteCampagne(campagne.id)">Supprimer</button>
+                            </form>
+                        </td>
+                    </tr>
+                  
+                
+               
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

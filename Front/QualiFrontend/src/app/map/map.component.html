@@ -1,0 +1,75 @@
+
+
+    <div class="container map-bg">
+      <div class="container ">
+       
+              <div class="col-sm-20">
+                        <div id="placeholder" class="card card card-default scrollspy">
+                          <div class="card-content">
+                              <div class="row">
+                                <div class="input-field col s12">
+                                  <input placeholder="Enter a location" id="ea" type="text" (keydown.enter)="$event.preventDefault()"  
+                                  autocorrect="off" autocapitalize="off" spellcheck="off" 
+                                  #origin>
+                                  <label for="ea">Enter address</label>
+                                </div>
+                              </div>
+                              </div>
+                              
+                              
+                             
+                              <div class="col-sm-20">
+
+                                  <div  class="z-depth-20" >
+                                    <agm-map  id="map"  [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (mapClick)="mapClick($event)"
+                                    [mapTypeControl]="mapTypeControl"  [mapTypeControlOptions]="mapTypeControlOptions" [fullscreenControl]="fullscreenControl"
+                                (mapReady)="mapReady($event)">
+                                
+
+                                <agm-data-layer [geoJson]="geoJson" [style]="styleFunc" (layerClick)="onClick($event)"></agm-data-layer>
+                                <agm-marker *ngFor="let m of marker , let index= i "
+                                [latitude]="m.lat" [longitude]="m.lng" [markerDraggable]="m.draggable"
+                                  (dragEnd)="markerDragEnd(m,$event)" [iconUrl]="m.iconUrl?m.iconUrl:''"></agm-marker>  
+                                  
+                                </agm-map>
+                                
+                                <div >
+                                  <button type="button" class="btn btn-primary" style="margin: 6px;" (click)="DrawingManager()">addPolygone</button>
+                                  <button type="button" (click)="openModal()" style="margin: 6px;" class="btn btn-primary">Define domain</button>
+                                  <button type="button" (click)="save()" style="margin: 6px;" class="btn btn-primary">Enregistrer</button>
+                                  <button type="button" class="btn btn-primary" style="margin: 6px;" (click)="Display()">Display</button><br>
+                                  </div> 
+                                 
+                                  
+                                  
+                              </div>
+                              <div>                           
+                              
+
+                          </div>
+                        </div>
+      
+      
+              
+      
+          
+      
+            </div>
+          
+              
+      
+            </div>
+      
+      </div>
+      </div>
+
+
+
+  
+
+
+
+
+
+
+    

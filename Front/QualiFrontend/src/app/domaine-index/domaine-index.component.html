@@ -1,0 +1,57 @@
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+       
+            <div class="pull-right">
+                <a routerLink="/domainecreate">Nouveau domaine</a>
+            </div>
+            <table class="table">
+              
+                
+                <tr>
+                    
+                    <th>Domaines: </th>
+                    
+                    
+                    <th>Actions</th>
+                </tr>
+           
+               
+                    
+                   
+                  
+                    <tr  *ngFor="let domaine of domaineList">
+                    
+                        <td>{{domaine.domaines}}</td>
+                        
+                      
+                      
+                        <td>  
+
+                            <form action=""  method="post">
+                            
+
+                          
+                            <a routerLink="/domaineedit/{{domaine.id}}" class="btn btn-default" >Editer</a>
+
+                            <button type="submit" class="btn btn-danger" (click)="deleteDomaine(domaine.id)" >Supprimer</button>
+                            </form>
+                        </td>
+                    </tr>
+                  
+                
+               
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+

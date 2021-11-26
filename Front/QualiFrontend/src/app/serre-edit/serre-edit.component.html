@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <form >
+            <div class="form-group">
+                <label for="domaineId"> Domaine:</label>
+        
+                <select name="domaines" class="browser-default" [(ngModel)]="serre.domaineSelect">
+               
+                <option  *ngFor="let domaine of serreDomaine">{{domaine}}</option>
+                
+                </select>
+               </div>
+           <div class="form-group">
+            <label for="domaine">Numero serre:</label> 
+          
+            <input type="text" name="numSerre"  id="numSerre" class="form-control" placeholder="Entrer le numero de serre" [(ngModel)]="serre.num_serre"></div>
+            <div class="form-group">
+            <label for="domaine">Superficie en ha:</label> 
+        
+            <input type="text" name="serres"  id="serres" class="form-control" placeholder="Entrer la serre" [(ngModel)]="serre.sup_serre_ha"></div>
+            <div class="form-group">
+            <input type="submit"   class="btn waves-effect waves-light border-round #c62828 red darken-3 col s20" (click)="update()"   value="Update"></div>
+        </form>
+        </div>
+    </div>
+    </div>
+
+
+
+

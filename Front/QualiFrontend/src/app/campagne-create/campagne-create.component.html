@@ -1,0 +1,21 @@
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <form   [formGroup]="createCampagne" (ngSubmit)="onSubmit()">
+           <div class="form-group">
+            <label for="domaine">Campagne:</label>
+            <input type="text" name="campagnes"  id="campagnes" class="form-control" placeholder="Entrer le domaine" formControlName="campagnes"></div>
+            <div class="form-group">
+            <input type="submit"   class="form-control btn btn-primary"  value="Enregistrer"></div>
+
+        </form>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,38 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+           
+        <form [formGroup]="createSerre" (ngSubmit)="onSubmit()">
+           
+            <div class="form-group">
+            <label for="domaineId"> Domaine:</label>
+            
+            <select name="domaines" class="browser-default" formControlName="domaineSelect">
+           
+            <option  *ngFor="let domaine of serreDomaine">{{domaine}}</option>
+            
+            </select>
+           </div>
+
+            <div class="form-group">
+            <label for="numSerre"> Numero Serre</label>
+            <input type="text" name="numSerre"  class="form-control" formControlName="num_serre"></div>
+
+            <div class="form-group">
+            <label for="superficie">Superficie en ha</label>
+            <input type="text"  name="superficie" class="form-control" formControlName="sup_serre_ha"></div>
+
+            <div class="form-group">
+            
+            <input type="submit"   class="btn waves-effect waves-light border-round #4caf50 green col s3" value="Enregistrer"></div>
+
+        </form>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,55 @@
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+       
+            <div class="pull-right">
+                <a routerLink="/culturecreate">Nouvelle culture</a>
+            </div>
+            <table class="table">
+              
+                
+                <tr > 
+                    <th>Cultures: </th>
+                    <th>Actions</th>
+                </tr>
+           
+               
+                    
+                   
+                  
+                    <tr  *ngFor="let culture of cultureList">
+                    
+                        <td>{{culture.cultures}}</td>
+                        
+                      
+                      
+                        <td>  
+
+                            <form >
+                            
+
+                         
+                            <a  class="btn btn-default"   routerLink="/cultureedit/{{culture.id}}" >Editer</a>
+
+                            <button type="submit" class="btn btn-danger"  (click)="deleteCulture(culture.id)" >Supprimer</button>
+                            </form>
+                        </td>
+                    </tr>
+                  
+                
+               
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

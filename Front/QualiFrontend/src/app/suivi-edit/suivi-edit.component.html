@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <form >
+            <div class="form-group">
+                <label for="domaineId"> Domaine:</label>assolementSelect:string
+                date:Date
+                nbr_ouvrier:number
+                qte_recolte:number
+        
+                <select name="domaines"  [(ngModel)]="suivi.assolementSelect">
+               
+                <option  *ngFor="let assolement of assolement ">{{assolement}}</option>
+                
+                </select>
+               </div>
+
+               
+               <div class="form-group">
+                <label for="date"> Date</label>
+                <input type="text" name="date" class="form-control"  [(ngModel)]="suivi.date" data-date-format='YYYY-MM-DD' matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            
+            </div>
+           
+                <div class="form-group">
+                    <label for="nbOuvrier"> Nombre d'Ouvrier</label>
+                    <input type="text" name="numSerre"  class="form-control" [(ngModel)]="suivi.nbr_ouvrier"></div>
+    
+                    <div class="form-group">
+                        <label for="qte_recolte"> Quantite recolté</label>
+                        <input type="text" name="qte_recolte"  class="form-control" [(ngModel)]="suivi.qte_recolte"></div>
+                       
+           
+            <div class="form-group">
+            <input type="submit"   class="form-control btn btn-danger"  (click)="update()"   value="Update"></div>
+        </form>
+        </div>
+    </div>
+    </div>
+
+
+
+

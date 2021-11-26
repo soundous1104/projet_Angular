@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <form >
+            <div class="form-group">
+                <label for="domaineId"> Domaine:</label>
+        
+                <select name="domaines"  [(ngModel)]="assolement.domaineSelect">
+               
+                <option  *ngFor="let domaine of domaine">{{domaine}}</option>
+                
+                </select>
+               </div>
+            
+            <div class="form-group">
+             <label for="serre"> Serre:</label>
+             
+             <select name="serre"  [(ngModel)]="assolement.serreSelect">
+            
+             <option  *ngFor="let serre of serre">{{serre}}</option>
+             
+             </select>
+            </div>
+            <div class="form-group">
+             <label for="variete"> Variete:</label>
+             
+             <select name="variete"  [(ngModel)]="assolement.varieteSelect">
+            
+             <option  *ngFor="let variete of variete">{{variete}}</option>
+             
+             </select>
+            </div>
+            <div class="form-group">
+             <label for="culture"> Culture:</label>
+             
+             <select name="culture"  [(ngModel)]="assolement.cultureSelect">
+            
+             <option  *ngFor="let culture of culture">{{culture}}</option>
+             
+             </select>
+            </div>
+            <div class="form-group">
+                <label for="campagne"> Campagne:</label>
+                
+                <select name="campagne"  [(ngModel)]="assolement.campagneSelect">
+               
+                <option  *ngFor="let campagne of campagne">{{campagne}}</option>
+                
+                </select>
+               </div>
+
+               <div class="form-group">
+            <input type="submit"   class="form-control btn btn-danger"  (click)="update()"   value="Update"></div>
+        </form>
+        </div>
+    </div>
+    </div>
+
+
+
+
+

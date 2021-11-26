@@ -1,0 +1,69 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+           
+        <form [formGroup]="createAssolement" (ngSubmit)="onSubmit()">
+           
+            <div class="form-group">
+            <label for="domaineId"> Domaine:</label>
+            
+            <select name="domaines"  formControlName="domaineSelect">
+           
+            <option  *ngFor="let domaine of domaine">{{domaine}}</option>
+            
+            </select>
+           </div>
+           <div class="form-group">
+            <label for="serre"> Serre:</label>
+            
+            <select name="serre"  formControlName="serreSelect">
+           
+            <option  *ngFor="let serre of serre">{{serre}}</option>
+            
+            </select>
+           </div>
+           <div class="form-group">
+            <label for="variete"> Variete:</label>
+            
+            <select name="variete"  formControlName="varieteSelect">
+           
+            <option  *ngFor="let variete of variete">{{variete}}</option>
+            
+            </select>
+           </div>
+           <div class="form-group">
+            <label for="culture"> Culture:</label>
+            
+            <select name="culture"  formControlName="cultureSelect">
+           
+            <option  *ngFor="let culture of culture">{{culture}}</option>
+            
+            </select>
+           </div>
+           <div class="form-group">
+            <label for="campagne"> Campagne:</label>
+            
+            <select name="campagne"  formControlName="campagneSelect">
+           
+            <option  *ngFor="let campagne of campagne">{{campagne}}</option>
+            
+            </select>
+           </div>
+
+            
+
+            <div class="form-group">
+            
+            <input type="submit"   class="form-control btn btn-primary" value="Enregistrer"></div>
+
+        </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
